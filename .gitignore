@@ -2,3 +2,5 @@
 WhatsApp Image*.jpeg
 domain-research/
 .claude/
+node_modules/
+dist/

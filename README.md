@@ -1,34 +1,34 @@
-# Stallion Connect Pvt Ltd — Website
+# Stallion Connect Pvt Ltd — Website (React edition)
 
 Company website for **Stallion Connect Pvt Ltd**: call centre, BPO, sales, customer support, recruitment and back-office services.
 
-Live site: https://connectstallion.github.io
+A single-page site built with **React + Vite + Tailwind CSS + TypeScript**. Sections: Home, About, Services, Industries, Careers and Contact.
 
-## Pages
+## Project layout
 
-| File | Page |
+| Path | What it holds |
 | --- | --- |
-| `index.html` | Home |
-| `about.html` | About Us |
-| `services.html` | Services (all 7 service lines) |
-| `industries.html` | Industries |
-| `careers.html` | Careers and job application form |
-| `contact.html` | Contact and enquiry form |
-
-Styles live in `assets/css/styles.css`, scripts in `assets/js/main.js` and images in `assets/img/`. There is no build step: edit the files and push.
+| `src/content.ts` | All site copy: services, industries, jobs, contact details |
+| `src/components/` | One component per section, plus the looping video background and scroll reveal |
+| `src/styles/fonts.css` | Instrument Serif (display) and Inter (body) |
+| `src/styles/theme.css` | Colours, fonts and the `fade-rise` animations (Tailwind v4 `@theme`) |
+| `src/lib/forms.ts` | Form submission and `FORM_ENDPOINT` |
+| `public/` | Logos, favicon and the logo options page |
 
 ## Run locally
 
-Open `index.html` in a browser, or serve the folder:
-
 ```bash
-python -m http.server 5500
+npm install
+npm run dev
 ```
 
-then visit http://localhost:5500.
+`npm run build` writes the production site to `dist/`.
+
+## Deploying
+
+Every push to `main` runs `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages. The `base` path in `vite.config.ts` matches the repository name; change it if the repository is renamed or moved to a custom domain.
 
 ## Before launch
 
-- **Forms** run in demo mode and send nothing. Set `FORM_ENDPOINT` in `assets/js/main.js` (for example a Formspree form URL) to receive enquiries and job applications by email.
-- **Placeholders** are marked `TODO` in the HTML: office address, phone number, working hours, social media links, the "24×7" figure, careers perks and job openings.
-- **Logo** is a demo version. Replace the files in `assets/img/` when the final logo is ready.
+- **Forms** run in demo mode and send nothing. Set `FORM_ENDPOINT` in `src/lib/forms.ts` (for example a Formspree form URL) to receive enquiries and job applications by email.
+- **Placeholders** are marked `TODO` in `src/content.ts` and the components: office address, phone number, social media links, the "24×7" figure, careers perks and job openings.
