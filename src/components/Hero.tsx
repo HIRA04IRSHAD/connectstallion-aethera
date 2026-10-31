@@ -14,7 +14,7 @@ export default function Hero() {
         style={{ paddingTop: 'calc(8rem - 75px)' }}
       >
         <p className="animate-fade-rise mb-8 text-xs font-medium uppercase tracking-[0.2em] text-[#6F6F6F]">
-          BPO · Call Centre · Back-Office
+          Where every connection counts
         </p>
         <h1
           className="animate-fade-rise max-w-7xl font-display text-5xl font-normal text-[#000000] sm:text-7xl md:text-8xl"

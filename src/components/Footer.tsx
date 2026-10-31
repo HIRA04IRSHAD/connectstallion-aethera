@@ -17,7 +17,16 @@ export default function Footer() {
 
         <div className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1.3fr_1fr]">
           <div>
-            <a href="#home" className="font-display text-3xl tracking-tight">Stallion Connect</a>
+            <a href="#home" aria-label="Stallion Connect home" className="inline-block">
+              <img
+                src={`${import.meta.env.BASE_URL}assets/img/logo-full.webp`}
+                alt="Stallion Connect — Where every connection counts"
+                width={900}
+                height={281}
+                loading="lazy"
+                className="h-20 w-auto"
+              />
+            </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted">
               Call centre, sales, customer support and back-office outsourcing for businesses across India and overseas.
             </p>

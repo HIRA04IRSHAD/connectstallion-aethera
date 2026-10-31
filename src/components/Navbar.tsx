@@ -40,8 +40,14 @@ export default function Navbar() {
             : 'mt-0 max-w-7xl rounded-full border border-transparent px-5 py-6'
         }`}
       >
-        <a href="#home" className={`font-display tracking-tight text-[#000000] transition-all duration-500 ${scrolled ? 'text-2xl' : 'text-3xl'}`}>
-          Stallion Connect
+        <a href="#home" aria-label="Stallion Connect home" className="flex-none">
+          <img
+            src={`${import.meta.env.BASE_URL}assets/img/logo-compact.webp`}
+            alt="Stallion Connect — Where every connection counts"
+            width={560}
+            height={175}
+            className={`w-auto transition-all duration-500 ${scrolled ? 'h-9' : 'h-10 sm:h-12'}`}
+          />
         </a>
 
         <ul className="hidden items-center gap-7 lg:flex">
