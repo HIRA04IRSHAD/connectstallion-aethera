@@ -1,4 +1,4 @@
-import Navbar from './Navbar';
+import Navbar, { NAV_HEIGHT } from './Navbar';
 import VideoBackground from './VideoBackground';
 
 export default function Hero() {
@@ -6,6 +6,8 @@ export default function Hero() {
     <div id="home" className="relative min-h-screen w-full overflow-hidden">
       <VideoBackground />
       <Navbar />
+      {/* the navbar is fixed, so keep its original space in the layout */}
+      <div style={{ height: NAV_HEIGHT }} aria-hidden="true" />
 
       <section
         className="relative z-10 flex flex-col items-center justify-center px-6 pb-40 text-center"

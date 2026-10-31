@@ -29,7 +29,7 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 1.5rem;
+    scroll-padding-top: 6rem;
   }
   body {
     @apply bg-background text-ink font-body antialiased;
